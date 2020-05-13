@@ -1,0 +1,36 @@
+﻿@model spp_1.Models.Task
+
+@{
+    ViewBag.Title = "Добавить задачу";
+}
+
+<head>
+    <meta name="viewport1" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/AddTask.css" />
+</head>
+
+<style>
+    body {
+        background: #ff0000;
+    }
+</style>
+<body>
+    <form class="decor" method="post" action="/Home/AddTask">
+        <div class="form-inner">
+            <input type="hidden" value="@ViewBag.Id" name="Id" />
+            <p>Введите название задачи</p>
+            <input type="text" name="Name" />
+            <p>Выберите статус задачи</p>
+            <select name="Status">
+                <option>Начну</option>
+                <option>В процессе</option>
+                <option>Закончил</option>
+            </select>
+            <p>Выберите дату</p>
+            <p><input type="datetime-local" name="Date"></p>
+            <p><input type="submit"></p>
+        </div>
+    </form>
+</body>
+
+
