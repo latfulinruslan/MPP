@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Показать задания";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Styles.css" />
+</head>
+
+<div>
+    <div class="Tittle">
+        <p>Список задач</p>
+    </div>
+    
+    <table>
+        <tr>
+            <th colspan="1"><p>Id</p></th>
+            <th><p>Name</p></th>
+            <th><p>Status</p></th>
+            <th><p>Date</p></th>
+        </tr>
+        @foreach(var t in ViewBag.Tasks)
+        {
+            <tr>
+                <td><p>@t.Id</p></td>
+                <td><p>@t.Name</p></td>
+                <td><p>@t.Status</p></td>
+                <td><p>@t.Date</p></td>
+                <td><p>@Html.ActionLink("Редактировать", "EditTask", "Home", new { id = t.Id}, null)</p></td>
+                <td><p>@Html.ActionLink("Удалить", "DeleteTask", "Home", new {id = t.Id }, null)</p></td>
+            </tr>
+        }
+    </table>
+    @Html.ActionLink("Добавить задачу", "AddTask", "Home")
+</div>

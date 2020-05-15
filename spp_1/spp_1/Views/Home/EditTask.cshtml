@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Редактировать задачу";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model spp_1.Models.Task
+
+<h2>Задача № @Model.Id</h2>
+<form method="post" action="/Home/EditTask">
+    <div class="form-left-decoration"></div>
+    <div class="form-right-decoration"></div>
+    <div class="circle"></div>
+    <div class="form-inner">
+        <input type="hidden" value="@Model.Id" name="Id" />
+        <p>Введите название задачи</p>
+        <input type="text" value="@Model.Name" name="Name"  />
+        <p>Выберите статус задачи</p>
+        <select name="Status" value="@Model.Status">
+            <option>Начну</option>
+            <option>В процессе</option>
+            <option>Закончил</option>
+        </select>
+        <p>Выберите дату</p>
+        <p><input type="datetime-local" name="Date" value="@Model.Date"></p>
+        <p><input type="submit"></p>
+    </div>
+</form>
+
