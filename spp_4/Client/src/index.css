@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 522px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.datepicker-date-display {
+  background-color: darkred;
+}
+
+.datepicker-cancel {
+  color: darkred;
+}
+
+.datepicker-done {
+  color: darkred;
+}
+
+.is-selected .datepicker-day-button {
+  background-color: darkred;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+  border-right-color: darkred;
+  border-bottom-color: darkred;
+}
+.react-datepicker__input-container {
+  width: inherit;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.datePicker {
+  width: calc(100% - 3rem) !important;
+  float: right;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: darkred;
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid darkred;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range, .react-datepicker__month-text--selected, .react-datepicker__month-text--in-selecting-range, .react-datepicker__month-text--in-range {
+  background-color: darkred !important;
+}
+
+.changeCursor {
+  cursor: pointer;
+}
+
+.usersInfo {
+  margin-right: 10px;
+}
